@@ -15,6 +15,7 @@ body {
     font-size: $font-med;
     font-weight: 300;
     color: $grayishBlue;
+    overflow-x: hidden;
 
     @include breakpoint-up(large) {
         font-size: $font-med;
@@ -127,7 +128,7 @@ a, a:visited, a:hover {
     }
 
     &-jc-c {
-        justify-content: space-between;
+        justify-content: center;
     }
 
     &-ai-c {
@@ -137,20 +138,34 @@ a, a:visited, a:hover {
 
 // Buttons
 button, .button {
+    position: relative;
     display: inline-block;
     padding: .875rem 2.1875rem;
-    background: linear-gradient(to right, $limeGreen, $brightCyan );
-    border-radius: 50px;
+    background-image: linear-gradient(to right, $limeGreen, $brightCyan );
     cursor: pointer;
-    border: none;
+    border: 0;
+    border-radius: 50px;
     color: white;
     font-weight: 400;
     font-size: $font-sm;
     color: white;
     transition: opacity 300ms ease-in-out;
+    overflow: hidden;
 
-    &:hover {
-        opacity: .65;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, .25);
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+    }
+
+    &:hover::before {
+        opacity: 1;
     }
 }
 

@@ -1,7 +1,7 @@
 .header {
-
-    // Hamburger 
-&.open {
+    background-color: $lightGrayishBlue;;
+// Hamburger 
+    &.open {
 
  .header__toggle {
 
@@ -17,9 +17,9 @@
         transform: rotate(-45deg);
     }
     }
-}
+    }
 
-.overlay {
+    .overlay {
     opacity: 0;
     position: fixed;
     top: 0;
@@ -27,12 +27,32 @@
     bottom: 0px;
     left: 0px;
     background-image: linear-gradient($darkBlue, transparent);
-}
+    z-index: 1;
+    }
+
     nav {
         position: relative;
-        background-color: white;
+        //background-color: white;
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
+        z-index: 2;
+    }
+
+    // .divider {
+    //     border-top: 1px solid $grayishBlue;
+    //     opacity: 50%;
+    //     //max-width: 20%;
+    // }
+
+    .second-nav {
+        background-color: white;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+
+        a {
+            color: $grayishBlue;
+        }
+        
     }
 
     &__logo {
@@ -69,6 +89,7 @@
         margin-top: 1.5rem;
         padding: 1.625rem;
         border-radius: 5px;
+        z-index: 1;
 
         a {
             display: block;
@@ -80,12 +101,11 @@
     }
 
     &__links {
-        
 
         a {
             position: relative;
             font-size: $font-sm;
-            color: $grayishBlue;
+            color: $darkBlue;
             transition: color 300ms ease-in-out;
 
             &:not(:last-child){
@@ -106,6 +126,41 @@
             }
 
             &:hover {
+                color: $grayishBlue;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__secondary-links {
+
+        a {
+            position: relative;
+            font-size: .75rem;
+            color: $grayishBlue;
+            transition: color 300ms ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 2rem;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                height: 5px;
+                left: 0;
+                right: 0;
+                bottom: -8px;
+                background: linear-gradient(to right, $limeGreen, $brightCyan );
+                opacity: 0;
+                transition: opacity 200ms ease-in-out;
+            }
+
+            &:hover {
                 color: $darkBlue;
 
                 &::before {
@@ -113,5 +168,6 @@
                 }
             }
         }
+
     }
 }
