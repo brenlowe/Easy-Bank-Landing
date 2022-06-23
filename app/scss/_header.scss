@@ -3,20 +3,20 @@
 // Hamburger 
     &.open {
 
- .header__toggle {
+        .header__toggle {
 
-    span:first-child {
-        transform: rotate(45deg);
-    }
+            span:first-child {
+                transform: rotate(45deg);
+            }
 
-    span:nth-child(2) {
-        opacity: 0;
-    }
+            span:nth-child(2) {
+                opacity: 0;
+            }
 
-    span:last-child {
-        transform: rotate(-45deg);
-    }
-    }
+            span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
     }
 
     .overlay {
@@ -32,27 +32,15 @@
 
     nav {
         position: relative;
-        //background-color: white;
         padding-top: 1.0625rem;
         padding-bottom: 1.0625rem;
         z-index: 2;
     }
 
-    // .divider {
-    //     border-top: 1px solid $grayishBlue;
-    //     opacity: 50%;
-    //     //max-width: 20%;
-    // }
-
     .second-nav {
         background-color: white;
         padding-top: .75rem;
         padding-bottom: .75rem;
-
-        a {
-            color: $grayishBlue;
-        }
-        
     }
 
     &__logo {
@@ -134,9 +122,10 @@
             }
         }
     }
+    
 
-    &__secondary-links {
-
+    &__secondary-items {
+        
         a {
             position: relative;
             font-size: .75rem;

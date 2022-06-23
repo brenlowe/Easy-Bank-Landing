@@ -320,10 +320,6 @@ button:hover::before, .button:hover::before {
   padding-bottom: .75rem;
 }
 
-.header .second-nav a {
-  color: #9698a6;
-}
-
 .header__logo img {
   width: 8.8125rem;
   height: 1.275rem;
@@ -399,7 +395,7 @@ button:hover::before, .button:hover::before {
   opacity: 1;
 }
 
-.header__secondary-links a {
+.header__secondary-items a {
   position: relative;
   font-size: .75rem;
   color: #9698a6;
@@ -407,11 +403,11 @@ button:hover::before, .button:hover::before {
   transition: color 300ms ease-in-out;
 }
 
-.header__secondary-links a:not(:last-child) {
+.header__secondary-items a:not(:last-child) {
   margin-right: 2rem;
 }
 
-.header__secondary-links a::before {
+.header__secondary-items a::before {
   position: absolute;
   content: "";
   display: block;
@@ -426,11 +422,11 @@ button:hover::before, .button:hover::before {
   transition: opacity 200ms ease-in-out;
 }
 
-.header__secondary-links a:hover {
+.header__secondary-items a:hover {
   color: #2d314d;
 }
 
-.header__secondary-links a:hover::before {
+.header__secondary-items a:hover::before {
   opacity: 1;
 }
 
@@ -451,7 +447,7 @@ button:hover::before, .button:hover::before {
 
 .hero__image {
   position: relative;
-  background-image: url("/images/bg-intro-mobile.svg");
+  background-image: url("../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -483,7 +479,7 @@ button:hover::before, .button:hover::before {
     content: "";
     position: absolute;
     height: 100%;
-    background-image: url("/images/bg-intro-desktop.svg");
+    background-image: url("../images/bg-intro-desktop.svg");
     width: 150%;
     background-size: 122%;
     background-repeat: no-repeat;
@@ -496,7 +492,7 @@ button:hover::before, .button:hover::before {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("/images/image-mockups.png");
+  background-image: url("../images/image-mockups.png");
   background-size: 93%;
   background-repeat: no-repeat;
   background-position: center bottom;
