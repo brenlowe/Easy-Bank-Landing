@@ -5,3 +5,5 @@ The landing page is static built with HTML, CSS, and SCSS. No real Javascript in
 and I now comprehend the cohesion between CSS and HTML using classes and IDs.
 
 I had the chance to play around with hover states, and responsive design. This whole page is built mobile-first which is the easiest, most efficient approach.
+
+** Link to the Site: https://brenlowe.github.io/Easy-Bank-Landing/ **
